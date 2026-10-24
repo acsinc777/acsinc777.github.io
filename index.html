@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=devioce-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header>
+      <h1>Alexander Duke Portfolio Index</h1>
+      <h2 id="welcomeMessage">Welcome</h2>
+    </header>
+    <section id="about">
+        <h2>About</h2>
+        <div>
+          <p>
+            Hello, my name is Alexander Duke. I am an amateur coder and artist currently attending ECPI University.
+          </p>
+        </div>
+    </section>
+
+    <section id="projects">
+      
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>
+          Listed contact information including email, github, etc.
+        </p>
+        <div class="section-content">
+          <h3>Contact Me:</h3>
+
+          <form class="contact-form" action="#" method="POST">
+            <div class="form-group">
+                    <label for="sender-name">Name</label>
+                    <input type="text" id="sender-name" name="sender-name" required>
+            </div>
+  
+            <div class="form-group">
+              <label for="sender-email">Email Address</label>
+              <input type="email" id="sender-email" name="sender-email" required>
+            </div>
+  
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject">
+            </div>
+  
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+  
+            <input type="submit" value="Send Message" class="submit-btn">
+          </form>
+      </section>
+    
+    <script>
+      var name = prompt("Enter your name: ");
+      if (name) {
+        //code to update h2 header
+        document.getElementById("welcomeMessage").textContent = "Welcome " + name + ".";
+      }
+    </script>
+  </body>
