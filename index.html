@@ -114,5 +114,45 @@
         //code to update h2 header
         document.getElementById("welcomeMessage").textContent = "Welcome " + name + ".";
       }
+
+      //Display Div on Page Loading
+      window.onload = displayFunction() {
+        var projectCount = document,querySelectorAll(" ").length;
+        var universityResources = document.getElementById("universityResources");
+        var personalProjects = document.getElementById("personalProjects");
+
+        if (projectCount < 3) {
+          univeristyResources.style.display = "block";
+          personalProjects.style.display = "block";
+        } else {
+          univserityResources.style.display = "none";
+          personalProjects.style.display = "block";
+        }
+      };
+
+      //Skill List
+      var skills = ["HTML", "CSS", "Javascript", "Java", "FireAlpaca"];
+      var skillsList = document.getElementById("skillsList");
+  
+      skills.forEach(function(skill) {
+          const listItem = document.createElement("li");
+          listItem.textContent = skill;
+          skillsList.appendChild(listItem);
+      });
+      
+      //Dark Mode
+      const darkModeCheckbox = document.getElementById("darkMode");
+      darkModeCheckbox.addEventListener("change", function () {
+          document.body.classList.toggle("dark-mode");
+      });
+
+      //Submit Button Confirm
+      const submitButton = document.querySelector(".submit-btn");
+      submitButton.addEventListener("click", function (event) {
+          // Prevent the page from refreshing
+          event.preventDefault();
+          // Display confirmation message
+          alert("Thank you, " + name + ", your message has been sent!");
+      });
     </script>
   </body>
