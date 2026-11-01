@@ -147,13 +147,13 @@
       });
       
       //Dark Mode
-      const darkModeCheckbox = document.getElementById("darkMode");
+      var darkModeCheckbox = document.getElementById("darkMode");
       darkModeCheckbox.addEventListener("change", function () {
           document.body.classList.toggle("dark-mode");
       });
 
       //Submit Button Confirm
-      const submitButton = document.querySelector(".submit-btn");
+      var submitButton = document.querySelector(".submit-btn");
       submitButton.addEventListener("click", function (event) {
           // Prevent the page from refreshing
           event.preventDefault();
