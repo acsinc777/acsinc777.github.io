@@ -13,7 +13,7 @@ body {
   --bg-card: #ffffff;
   --text-main: #333333;
   --text-muted: #555555;
-  --accent-color: #0070d2; /* Clean university blue */
+  --accent-color: #0070d2;
   --border-color: #e1e4e8;
   
   /* Smooth global animation transition rule */
@@ -27,7 +27,7 @@ body.dark-mode {
   --bg-card: #252525;
   --text-main: #e0e0e0;
   --text-muted: #a0a0a0;
-  --accent-color: #4da3ff; /* Lighter vivid blue for high-contrast visibility */
+  --accent-color: #4da3ff;
   --border-color: #333333;
 }
 
