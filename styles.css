@@ -1,4 +1,4 @@
-.dark-mode-toggle {
+.dark-mode {
     display: block;
     text-align: center;
     color: white;
@@ -6,6 +6,6 @@
     font-weight: bold;
 }
 
-.dark-mode-toggle input {
+.dark-mode input {
     margin-right: 8px;
 }
