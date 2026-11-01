@@ -117,7 +117,7 @@
 
       //Display Div on Page Loading
       window.onload = displayFunction() {
-        var projectCount = document,querySelectorAll(" ").length;
+        var projectCount = document,querySelectorAll("#projects .project").length;
         var universityResources = document.getElementById("universityResources");
         var personalProjects = document.getElementById("personalProjects");
 
@@ -131,11 +131,11 @@
       };
 
       //Skill List
-      var skills = ["HTML", "CSS", "Javascript", "Java", "FireAlpaca"];
+      var skills = ["HTML", "CSS", "Javascript", "Java", "Clip Studio Paint"];
       var skillsList = document.getElementById("skillsList");
   
       skills.forEach(function(skill) {
-          const listItem = document.createElement("li");
+          var listItem = document.createElement("li");
           listItem.textContent = skill;
           skillsList.appendChild(listItem);
       });
