@@ -2,13 +2,16 @@
 <html lang='en'>
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=devioce-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <header>
       <h1>Alexander Duke Portfolio Index</h1>
       <h2 id="welcomeMessage">Welcome</h2>
+      <label>
+        <input type="checkbox" id="darkMode"> Dark Mode
+      </label>
     </header>
 
     <nav>
@@ -26,6 +29,8 @@
             Hello, my name is Alexander Duke. I am an amateur coder and artist currently attending ECPI University.
           </p>
         </div>
+        <h3>Skills</h3>
+        <ul id="skillsList"></ul>
     </section>
 
     <section id="featured-content">
@@ -35,7 +40,7 @@
           <h3>University Resources</h3>
           <ul>
             <li>
-                <a href="https://www.ecpi.edu/" target="https://www.ecpi.edu/">
+                <a href="https://www.ecpi.edu/" target="https://www.ecpi.edu/" target="_blank">
                     ECPI Program Home Page
                 </a>
             </li>
@@ -57,17 +62,17 @@
     <section id="projects">
       <h2>Projects</h2>
             <ul>
-                <li>
-                    <a href="https://github.com/acsinc777/DnD-Beginner-5e-Species-Wiki.git" target="https://github.com/acsinc777/DnD-Beginner-5e-Species-Wiki.git">
+                <li class="project">
+                    <a href="https://github.com/acsinc777/DnD-Beginner-5e-Species-Wiki.git">
                         Project One: D&D 5e Beginner Species Wiki
                     </a>
                 </li>
-                <li>
+                <li class="project">
                     <a href="https://github.com/username/project-two" target="_blank">
                         Project Two: Blank
                     </a>
                 </li>
-                <li>
+                <li class="project">
                     <a href="https://github.com/username/project-three" target="_blank">
                         Project Three: Blank
                     </a>
@@ -106,6 +111,7 @@
   
             <input type="submit" value="Send Message" class="submit-btn">
           </form>
+        </div>
       </section>
     
     <script>
@@ -116,8 +122,8 @@
       }
 
       //Display Div on Page Loading
-      window.onload = displayFunction() {
-        var projectCount = document,querySelectorAll("#projects .project").length;
+      window.onload = function() {
+        var projectCount = document.querySelectorAll("#projects .project").length;
         var universityResources = document.getElementById("universityResources");
         var personalProjects = document.getElementById("personalProjects");
 
