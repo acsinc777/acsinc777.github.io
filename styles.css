@@ -4,30 +4,26 @@ body {
     background-color: #ccccff;
     color: #000;
     font-family: Helvetica;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-:root {
-  /* Light Mode Theme Colors */
-  --bg-primary: #ffffff;
-  --bg-secondary: #f4f6f9;
-  --bg-card: #ffffff;
-  --text-main: #333333;
-  --text-muted: #555555;
-  --accent-color: #0070d2;
-  --border-color: #e1e4e8;
-  
-  /* Smooth global animation transition rule */
-  --theme-transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
-}
+/* Dark Mode */
 
-/* Dark Mode Overrides applied automatically via your JS toggle script */
 body.dark-mode {
-  --bg-primary: #121212;
-  --bg-secondary: #1e1e1e;
-  --bg-card: #252525;
-  --text-main: #e0e0e0;
-  --text-muted: #a0a0a0;
-  --accent-color: #4da3ff;
-  --border-color: #333333;
+    background-color: #121212;
+    color: #ffffff;
 }
+
+body.dark-mode input, 
+body.dark-mode textarea {
+  background-color: #222222;
+  color: #ffffff;
+  border: 1px solid #444444;
+}
+
+body.dark-mode a {
+  color: #4da3ff;
+}
+
+
 
