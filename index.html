@@ -7,7 +7,7 @@
     <title>Alexander Duke Portfolio Index</title>
   </head>
   <body>
-    <header>
+    <header id="pageHead">
       <h1>Alexander Duke Portfolio Index</h1>
       <h2 id="welcomeMessage">Welcome</h2>
       <label class="dark-mode">
@@ -153,6 +153,16 @@
       darkModeCheckbox.addEventListener("change", function () {
           document.body.classList.toggle("dark-mode");
       });
+
+      //Modifying Existing Elements with Selectors
+      var pageHead = document.getElementById("pageHead");
+      var welcomeMessage = document.getElementById("welcomeMessage");
+
+      pageHead.style.border = "3px solid #ff4757";
+      pageHead.style.display = "flex";
+      pageHead.style.alignItems = "center";
+      
+      welcomeMessage.style.color = "#8A9A5B";
 
       //Submit Button Confirm
       var submitButton = document.querySelector(".submit-btn");
