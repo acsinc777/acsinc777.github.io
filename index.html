@@ -108,6 +108,8 @@
               <label for="message">Message</label>
               <textarea id="message" name="message" rows="5"></textarea>
             </div>
+
+            <div class="form-status"></div>
   
             <input type="submit" value="Send Message" class="submit-btn">
           </form>
@@ -157,8 +159,17 @@
       submitButton.addEventListener("click", function (event) {
           // Prevent the page from refreshing
           event.preventDefault();
-          // Display confirmation message
-          alert("Thank you, " + name + ", your message has been sent!");
+
+          var form = submitButton.closest("form") || document.body;
+          var statusDiv = form.querySelector(".form-status");
+
+          if (statusDiv) {
+            statusDiv.textContent = "Sending Message...";
+          }
+
+          setTimeout(function () {
+            statusDiv.textContent = "Thank you, " + name + ", your message has been sent!";
+          }, 2500);
       });
     </script>
   </body>
