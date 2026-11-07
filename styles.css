@@ -1,6 +1,7 @@
 /* Base Layout */
 
 body {
+    position: relative;
     background-color: 00022E;
     color: #000;
     font-family: Helvetica;
