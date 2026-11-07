@@ -42,6 +42,21 @@ body.dark-mode a {
 
 /* Main Content Boxes */
 
+.main-content {
+    position: relative;
+    z-index: 1;
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+.content-box, .featured-box {
+    background-color: #ccccff;
+    padding: 30px;
+    margin-bottom: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
 
 /* Nav Header List */
 ul li {
