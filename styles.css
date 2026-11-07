@@ -96,6 +96,14 @@ body.dark-mode .content-box, body.dark-mode .featured-box {
     transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
+.featured-box img {
+    width: 150px;
+    height: auto;
+    margin: 10px;
+    border-radius: 4px;
+    transition: transform 0.3s ease;
+}
+
 /* Nav Header List */
 ul li {
     margin: 0;
