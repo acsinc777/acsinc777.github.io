@@ -61,6 +61,11 @@ body.dark-mode .content-box, body.dark-mode .featured-box {
     transform: scaleX(-1);
 }
 
+/* Header Stuff */
+#pageHead, #pageHead h1, #pageHead h2 {
+    color: #ffffff;
+}
+
 /* Main Content Boxes */
 
 .main-content {
@@ -85,15 +90,6 @@ ul li {
     margin: 0;
 }
 
-/* Footer */
-
-footer {
-    font-size: 12px;
-    color: white;
-    text-align: center;
-    background-color: black;
-}
-
 nav ul {
     display: flex;
     flex-direction: row;
@@ -114,8 +110,18 @@ nav a {
 }
 
 nav a:hover {
-    background-color: #a24857;
+    background-color: #ccccff;
 }
+/* Footer */
+
+footer {
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    background-color: black;
+}
+
+
 
 
 /* Responsive Media Queries */
