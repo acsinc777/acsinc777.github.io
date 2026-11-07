@@ -241,6 +241,7 @@ nav a:hover {
     margin: 5px;
     padding: 8px 16px;
     cursor: pointer;
+    flex-direction: row;
 }
 
 /* Contact Form */
