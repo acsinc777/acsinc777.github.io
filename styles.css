@@ -2,7 +2,7 @@
 
 body {
     position: relative;
-    background-color: 00022E;
+    background-color: #00022E;
     color: #000;
     font-family: Helvetica;
     transition: background-color 0.3s, color 0.3s;
@@ -32,11 +32,11 @@ body.dark-mode a {
 }
 
 body.dark-mode .content-box, body.dark-mode .featured-box {
-    background-color: 00022E;
+    background-color: #00022E;
 }
 
 /* Background Image */
-.pattern-background-pattern {
+.page-background-pattern {
     position: absolute;
     top: 0;
     left: 0;
