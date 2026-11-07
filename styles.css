@@ -29,6 +29,20 @@ body.dark-mode a {
   color: #4da3ff;
 }
 
+/* Background Image */
+.pattern-img {
+    width: auto;
+    height: auto;
+    margin-bottom: 200px;
+}
+
+.pattern-img-flipped {
+    transform: scaleX(-1);
+}
+
+/* Main Content Boxes */
+
+
 /* Nav Header List */
 ul li {
     margin: 0;
