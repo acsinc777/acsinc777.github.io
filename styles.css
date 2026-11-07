@@ -243,6 +243,46 @@ nav a:hover {
     outline: none;
 }
 
+.toolsubmit {
+    position: relative;
+    width: 100%;
+}
+
+.tooltip-text {
+    visibility: hidden;
+    opacity: 0;
+    width: 190px;
+    background-color: #36454F;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px;
+    border-radius: 4px;
+    font-size: 13px;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    transition: opacity 0.3s ease;
+}
+
+.tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #36454F transparent transparent transparent;
+}
+
+.toolsubmit:hover .tooltip-text,
+.toolsubmit:focus-within .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
 /* Footer */
 
 footer {
