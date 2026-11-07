@@ -30,7 +30,7 @@ body.dark-mode a {
   color: #4da3ff;
 }
 
-body.darkmode .content-box, body.dark-mode .featured-box {
+body.dark-mode .content-box, body.dark-mode .featured-box {
     background-color: 00022E;
 }
 
