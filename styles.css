@@ -112,6 +112,56 @@ nav a {
 nav a:hover {
     background-color: #ccccff;
 }
+
+/* Contact Form */
+
+.contact-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 400px;
+    margin: 0;
+    text-align: left;
+}
+
+.contact-form input:not(.submit-btn), 
+.contact-form textarea {
+    border: 1px solid #ccc;
+    background-color: #ffffff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-form input:not(.submit-btn):hover,
+.contact-form textarea:hover {
+    border-color: #124857;
+}
+
+.submit-btn { 
+    width: 100%; 
+    text-align: center; 
+    padding: 12px;
+    background-color: #36454F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: #ccccff;
+    outline: none;
+}
+
 /* Footer */
 
 footer {
