@@ -30,6 +30,10 @@ body.dark-mode a {
   color: #4da3ff;
 }
 
+body.darkmode .content-box, body.dark-mode .featured-box {
+    background-color: 00022E;
+}
+
 /* Background Image */
 .pattern-background-pattern {
     position: absolute;
@@ -63,6 +67,7 @@ body.dark-mode a {
     margin: 0 auto;
     padding: 60px 20px;
 }
+
 .content-box, .featured-box {
     background-color: #ccccff;
     padding: 30px;
