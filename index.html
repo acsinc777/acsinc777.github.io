@@ -81,7 +81,7 @@
           </div>
         </section>
   
-      <section id="projects" class="content-box">
+      <!-- <section id="projects" class="content-box">
         <h2>Projects</h2>
               <ul>
                   <li class="project">
@@ -100,6 +100,18 @@
                       </a>
                   </li>
               </ul>
+      </section> -->
+
+      <section id="projects" class="content-box">
+        <h2>Projects</h2>
+        <div class="projectSlides" id="slides">
+          <a id="imageLink" href="#" target="_blank">
+            <img id="slideImage" src="" alt="Slideshow image">
+          </a>
+        <p id="slideDescription"></p>
+        <button onclick="prevSlide()">❮</button>
+        <button onclick="nextSlide()">❯</button>
+        </div>
       </section>
   
       <section id="contact" class="content-box">
@@ -208,7 +220,52 @@
       var appendProject = document.getElementById("recentAppend");
       appendProject.textContent = "My most recent project has been a Neocities website using custom HTML and CSS to simulate an old webpgae feel. I plan to store my creative projects here such as art, written works and my TTRPG content.";
       
+      //Project Slides
+      var currentSlide = 0;
+      const images = ["placeholder1.png", "rolodex.png", ".png"];
+      const desc = [
+        "A Java program designed to grant basic assistance with beginners to the D&D TTRPG in choosing their starting Species.",
+        "A Java and SQLite program designed to act as a functional rolodex to store contacts of friends, family and work-related persons.",
+        "A personal project being hosted on Notion for my TTRPG content, all stored in a database on Notion."
+      ];
+      const links = [
+        "https://github.com/acsinc777/DnD-Beginner-5e-Species-Wiki.git",
+        "https://github.com/acsinc777/Rolodex-Project-Alexander",
+        "https://topaz-aries-2ac.notion.site/Ankle-s-D-D-Grimoire-20e26c18d056807198bde19839c589df?source=copy_link"
+      ];
+
+      const slideImage = document.getElementById("slideImage");
+      const slideDescription = document.getElementById("slideDescription");
+      const imageLink = document.getElementById("imageLink");
       
+      const slides = document.getElementById("slides");
+      const totalSlides = document.querySelectorAll(".slide").length;
+
+      function showSlide(index) {
+        currentSlide = index;
+        slideImage.src = images[currentSlide];
+        slideDescription.textContent = descriptions[currentSlide];
+        imageLink.href = links[currentSlide];
+      }
+
+      function nextSlide() {
+        currentSlide++;
+        if (currentSlide >= images.length) {
+          currentSlide = 0;
+        }
+        showSlide(currentSlide);
+      }
+
+      function prevSlide() {
+        currentSlide--;
+        if (currentSlide < 0) {
+          currentSlide = images.length - 1;
+        }
+        showSlide(currentSlide);
+      }
+
+      setInterval(nextSlide, 3000);
+      showSlide(0);
 
       //Modifying Existing Elements with Selectors
       var pageHead = document.getElementById("pageHead");
