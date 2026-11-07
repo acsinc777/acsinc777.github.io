@@ -104,6 +104,10 @@ body.dark-mode .content-box, body.dark-mode .featured-box {
     transition: transform 0.3s ease;
 }
 
+.featured-box img:hover {
+    transform: scale(1.05);
+}
+
 /* Nav Header List */
 ul li {
     margin: 0;
