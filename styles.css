@@ -211,7 +211,7 @@ nav a:hover {
     max-width: 400px;
 }
 
-.contact-form input:not(.submit-btn), 
+.contact-form input:not(.submit-btn),
 .contact-form textarea {
     background-color: #ffffff !important;
     color: #000000 !important;
@@ -225,8 +225,8 @@ nav a:hover {
     border-color: #124857;
 }
 
-.submit-btn { 
-    width: 100%; 
+.submit-btn {
+    width: 100%;
     padding: 12px;
     background-color: #36454F;
     color: #fff;
@@ -246,9 +246,12 @@ nav a:hover {
 .toolsubmit {
     position: relative;
     width: 100%;
+    display: flex;
+    justify-content: flex-start;
 }
 
 .tooltip-text {
+    display: block;
     visibility: hidden;
     opacity: 0;
     width: 190px;
@@ -259,19 +262,18 @@ nav a:hover {
     border-radius: 4px;
     font-size: 13px;
     position: absolute;
-    bottom: 110%;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: calc(100% + 8px);
+    left: 0;
     z-index: 10;
     transition: opacity 0.3s ease;
+    pointer-events: none;
 }
 
 .tooltip-text::after {
     content: "";
     position: absolute;
     top: 100%;
-    left: 50%;
-    margin-left: -5px;
+    left: 20px;
     border-width: 5px;
     border-style: solid;
     border-color: #36454F transparent transparent transparent;
