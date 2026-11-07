@@ -217,56 +217,68 @@
       
       //Project Slides
       var currentSlide = 0;
-      
-      const images = [
-          "placeholder1.png",
-          "rolodex.png",
-          "grimoire.png"
+
+      const defaultProjects = [
+          {
+              image: "placeholder1.png",
+              title: "D&D Species Wiki",
+              description: "A Java program designed to grant basic assistance with beginners to the D&D TTRPG in choosing their starting Species.",
+              link: "https://github.com/acsinc777/DnD-Beginner-5e-Species-Wiki.git"
+          },
+          {
+              image: "rolodex.png",
+              title: "Rolodex Project",
+              description: "A Java and SQLite program designed to act as a functional rolodex to store contacts of friends, family and work-related persons.",
+              link: "https://github.com/acsinc777/Rolodex-Project-Alexander"
+          },
+          {
+              image: "grimoire.png",
+              title: "D&D Grimoire",
+              description: "A personal project being hosted on Notion for my TTRPG content, all stored in a database on Notion.",
+              link: "https://topaz-aries-2ac.notion.site/Ankle-s-D-D-Grimoire-20e26c18d056807198bde19839c589df?source=copy_link"
+          }
       ];
       
-      const titles = [
-          "D&D Species Wiki",
-          "Rolodex Project",
-          "D&D Grimoire"
-      ];
+      let projects;
       
-      const desc = [
-          "A Java program designed to grant basic assistance with beginners to the D&D TTRPG in choosing their starting Species.",
-          "A Java and SQLite program designed to act as a functional rolodex to store contacts of friends, family and work-related persons.",
-          "A personal project being hosted on Notion for my TTRPG content, all stored in a database on Notion. This is less to show my database skills and more to show my organizational skills."
-      ];
+      const storedProjects = sessionStorage.getItem("projects");
       
-      const links = [
-          "https://github.com/acsinc777/DnD-Beginner-5e-Species-Wiki.git",
-          "https://github.com/acsinc777/Rolodex-Project-Alexander",
-          "https://topaz-aries-2ac.notion.site/Ankle-s-D-D-Grimoire-20e26c18d056807198bde19839c589df?source=copy_link"
-      ];
+      if (storedProjects === null) {
+          sessionStorage.setItem("projects", JSON.stringify(defaultProjects));
+          projects = defaultProjects;
+      } else {
+          projects = JSON.parse(storedProjects);
+      }
       
       const slideImage = document.getElementById("slideImage");
       const slideTitle = document.getElementById("slideTitle");
       const slideDescription = document.getElementById("slideDescription");
       const imageLink = document.getElementById("imageLink");
       
-      const totalSlides = images.length;
+      const totalSlides = projects.length;
       
       function showSlide(index) {
           currentSlide = index;
-          slideImage.src = images[currentSlide];
-          slideTitle.textContent = titles[currentSlide];
-          slideDescription.textContent = desc[currentSlide];
-          imageLink.href = links[currentSlide];
+      
+          slideImage.src = projects[currentSlide].image;
+          slideTitle.textContent = projects[currentSlide].title;
+          slideDescription.textContent = projects[currentSlide].description;
+          imageLink.href = projects[currentSlide].link;
       }
       
       function nextSlide() {
           currentSlide++;
+      
           if (currentSlide >= totalSlides) {
               currentSlide = 0;
           }
+      
           showSlide(currentSlide);
       }
       
       function prevSlide() {
           currentSlide--;
+      
           if (currentSlide < 0) {
               currentSlide = totalSlides - 1;
           }
