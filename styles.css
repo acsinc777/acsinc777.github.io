@@ -5,6 +5,7 @@ body {
     color: #000;
     font-family: Helvetica;
     transition: background-color 0.3s, color 0.3s;
+    overflow-x: hidden;
 }
 
 html, body {
@@ -32,13 +33,21 @@ body.dark-mode a {
 /* Background Image */
 .pattern-background-pattern {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
     z-index: -1;
     pointer-events: none;
+}
+
+.patern-img-normal, .pattern-img-flipped {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0;
 }
 
 .pattern-img-flipped {
