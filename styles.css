@@ -198,26 +198,36 @@ nav a:hover {
 /* Project Slides */
 
 .projectSlides {
-    width: 500px;
-    margin: auto;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 
 #imageLink {
     display: block;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: 300px;
 }
 
 #slideImage {
+    display: block;
     width: 100%;
     height: 300px;
     object-fit: cover;
-    display: block;
+    border-radius: 8px;
     transition: opacity 0.3s ease;
+}
+
+#slideTitle {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0 5px;
 }
 
 #slideDescription {
@@ -228,7 +238,7 @@ nav a:hover {
     box-sizing: border-box;
 }
 
-.slideshow button {
+.projectSlides button {
     margin: 5px;
     padding: 8px 16px;
     cursor: pointer;
