@@ -150,14 +150,14 @@ nav a:hover {
     flex-direction: column;
     gap: 8px;
     max-width: 400px;
-    margin: 0;
-    text-align: left;
 }
 
 .contact-form input:not(.submit-btn), 
 .contact-form textarea {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    color-scheme: light !important;
     border: 1px solid #ccc;
-    background-color: #ffffff;
     transition: background-color 0.3s ease, border-color 0.3s ease;
 }
 
@@ -168,10 +168,9 @@ nav a:hover {
 
 .submit-btn { 
     width: 100%; 
-    text-align: center; 
     padding: 12px;
     background-color: #36454F;
-    color: white;
+    color: #fff;
     border: none;
     border-radius: 4px;
     font-weight: bold;
