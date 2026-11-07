@@ -22,8 +22,14 @@
           <span class="slider round"></span>
         </label>
       </header>
-  
-      
+
+      <div class="modal-overlay" id="modalOverlay">
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+          <h2 id="modalTitle">Work in Progress</h2>
+          <p>This page is a work in progress.</p>
+          <button class="close-btn" onclick="closeModal()">Close</button>
+        </div>
+      </div>
   
       <nav>
           <ul>
@@ -138,12 +144,12 @@
     </main>
     
     <script>
-      var name = prompt("Enter your name: ");
-      if (name) {
-        //code to update h2 header
-        document.getElementById("welcomeMessage").textContent = "Welcome " + name + ".";
-      }
-
+      //Closing the Modal
+      function closeModal() {
+            document.getElementById("modalOverlay")
+                .classList.add("hidden");
+        }
+      
       //Display Div on Page Loading
       window.onload = function() {
         var projectCount = document.querySelectorAll("#projects .project").length;
